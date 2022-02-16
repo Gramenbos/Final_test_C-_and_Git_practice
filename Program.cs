@@ -13,3 +13,18 @@ string[] FillArray()
     return workArray;
 }
 
+string PrintArray(string[] array)
+{
+    string stringArray = "[";
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (i == array.Length - 1)
+        {
+            stringArray += $"{array[i]}";
+            break;
+        }
+        stringArray += ($"{array[i]}, ");
+    }
+    stringArray += "]";
+    return stringArray;
+}
