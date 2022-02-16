@@ -28,3 +28,16 @@ string PrintArray(string[] array)
     stringArray += "]";
     return stringArray;
 }
+
+int CountStringSymbols(string[] array)
+{
+    int counter = 0;
+    foreach (string item in array)
+    {
+        if (item.Length <= 3)
+        {
+            counter++;
+        }
+    }
+    return counter;
+}
