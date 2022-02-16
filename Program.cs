@@ -13,26 +13,26 @@ string[] FillArray()
     return workArray;
 }
 
-string PrintArray(string[] array)
+string PrintArray(string[] workArray)
 {
     string stringArray = "[";
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < workArray.Length; i++)
     {
-        if (i == array.Length - 1)
+        if (i == workArray.Length - 1)
         {
-            stringArray += $"{array[i]}";
+            stringArray += $"{workArray[i]}";
             break;
         }
-        stringArray += ($"{array[i]}, ");
+        stringArray += ($"{workArray[i]}, ");
     }
     stringArray += "]";
     return stringArray;
 }
 
-int CountStringSymbols(string[] array)
+int CountStringSymbols(string[] workArray)
 {
     int counter = 0;
-    foreach (string item in array)
+    foreach (string item in workArray)
     {
         if (item.Length <= 3)
         {
@@ -40,4 +40,20 @@ int CountStringSymbols(string[] array)
         }
     }
     return counter;
+}
+
+string[] GenerateNewArray(string[] workArray)
+{
+    int resultArrayLength = CountStringSymbols(workArray);
+    string[] resultArray = new string[resultArrayLength];
+    int i = 0;
+    foreach (string item in workArray)
+    {
+        if (item.Length <= 3)
+        {
+            resultArray[i] = item;
+            i++;
+        }
+    }
+    return resultArray;
 }
