@@ -1,7 +1,8 @@
 ﻿string[] workArray = FillArray();
-Console.WriteLine(PrintArray(workArray));
-int counter = CountStringSymbols(workArray);
-Console.WriteLine(counter);
+string[] resultArray = GenerateNewArray(workArray);
+string firstArray = PrintArray(workArray);
+string secondArray = PrintArray(resultArray);
+Console.WriteLine(firstArray + " -> " + secondArray);
 
 string[] FillArray()
 {
