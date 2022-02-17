@@ -21,10 +21,10 @@ string PrintArray(string[] workArray)
     {
         if (i == workArray.Length - 1)
         {
-            stringArray += $"{workArray[i]}";
+            stringArray += $"\"{workArray[i]}\"";
             break;
         }
-        stringArray += ($"{workArray[i]}, ");
+        stringArray += ($"\"{workArray[i]}\", ");
     }
     stringArray += "]";
     return stringArray;
